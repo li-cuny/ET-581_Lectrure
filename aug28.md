@@ -30,10 +30,17 @@
 ## 4. Arithmetic and Operators
 
 - Operators: `+ - * / % ++ -- ()`  
+
+
+
 - **Integer division** truncates decimals; **double division** keeps decimals  
 - `%` modulus gives remainder  
 - Floating-point calculations are **not exact** → use `BigDecimal` for precision when needed  
 
+| Operator | Description | Example | Output |
+|----------|------------|---------|--------|
+| `++i`   | Pre-increment: increment first, then use value | `int i = 5; System.out.println(++i);` | 6 |
+| `i++`   | Post-increment: use value first, then increment | `int i = 5; System.out.println(i++);` | 5 |
 ## 5. Type Casting
 
 - **Widening (automatic):** small → large type (`int → double`)  
