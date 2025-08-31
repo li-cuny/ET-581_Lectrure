@@ -61,7 +61,7 @@ input.close();
 -   Methods: `nextInt()`, `nextDouble()`, `nextFloat()`, `nextLine()`,
     `next()`
 
-## 7. Output Formatting
+## 7. Output Formatting (Not yet covered)
 
 -   `System.out.println()` for simple output\
 -   `System.out.printf()` for formatted output:
