@@ -77,7 +77,11 @@ if (number % 2 == 0) {
 ```
 ### ternary operator 
 
-**(condition) ? expressionTrue : expressionFalse**
+**variable = (condition) ? valueIfconditionTrue : valueIfconditionFalse;**
+```java
+int number = 2;
+boolean isNumberEven = (number % 2 == 0) ? true: false;
+```
 
 
 
