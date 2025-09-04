@@ -88,6 +88,9 @@ if (number % 2 == 0) {
 ```java
 int number = 2;
 boolean isNumberEven = (number % 2 == 0) ? true: false;
+// same as 
+// if (number % 2 == 0) isNumberEven = true;
+// else isNumberEven = false;
 ```
 
 
