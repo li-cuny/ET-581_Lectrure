@@ -46,7 +46,7 @@ System.out.println(str2.compareTo(str1)); // positive number (banana > apple)
 - `.substring(int index)` : return  substring index to end
 ```java
  String sentence = "Hello world Java";
- int index = sentence.indexOf("world");
+ int index = sentence.indexOf("world");// index: 6
  System.out.println(sentence.substring(index));
  //output:world Java
 ```
