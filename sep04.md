@@ -76,10 +76,11 @@ System.out.println(!a);     // false
 **if (condition) statement;** // or **blocks** `{...}` which is group of statements;
 ```java
 int number = 2;
+boolean isNumberEven;
 if (number % 2 == 0) {
-    System.out.println("Even number");
+    isNumberEven = true; // Even number
 } else {
-    System.out.println("Odd number");
+    isNumberEven = false; // Odd number
 }
 ```
 ### ternary operator 
@@ -88,9 +89,6 @@ if (number % 2 == 0) {
 ```java
 int number = 2;
 boolean isNumberEven = (number % 2 == 0) ? true: false;
-// same as 
-// if (number % 2 == 0) isNumberEven = true;
-// else isNumberEven = false;
 ```
 
 
