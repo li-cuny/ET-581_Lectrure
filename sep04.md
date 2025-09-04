@@ -42,11 +42,11 @@ String str2 = "banana";
 System.out.println(str1.compareTo(str2)); // negative number (apple < banana)
 System.out.println(str2.compareTo(str1)); // positive number (banana > apple)
 ```
-- `.indexOf(String s)` : first occurrence of the specified string
+- `.indexOf(String s)` : first occurrence of the specified string, not found return `-1`
 - `.substring(int index)` : return  substring index to end
 ```java
  String sentence = "Hello world Java";
- int index = sentence.indexOf("world");// index: 6
+ int index = sentence.indexOf("world");// index: 6 
  System.out.println(sentence.substring(index));
  //output:world Java
 ```
