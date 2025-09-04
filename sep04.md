@@ -68,11 +68,20 @@ System.out.println(!a);     // false
 ### if
 **if (condition) statement;** // or **blocks** `{...}` which is group of statements;
 ```java
-int score = 85;
-if(score >= 90) {
-    System.out.println("Grade A");
-} 
+int number = 2;
+if(number % 2 == 0) {
+    System.out.println("Even number");
+} else {
+    System.out.println("Odd number");
+}
 ```
+### ternary operator 
+
+**(condition) ? expressionTrue : expressionFalse**
+```java
+int number = 2;
+number % 2 == 0 ? System.out.println("Even number"): System.out.println("Odd number");
+
 
 ### switch
 ```java
