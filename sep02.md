@@ -51,7 +51,6 @@ String str2 = "string";
 
 ### String Class Methods
 
-
 ## 1. `concat()`
 **Definition:**
 ```java
@@ -61,17 +60,10 @@ String concat(String str)
 
 **Example:**
 ```java
-public class ConcatExample {
-    public static void main(String[] args) {
-        String s1 = "Hello";
-        String s2 = " World";
-        String result = s1.concat(s2);
-        System.out.println(result); // Output: Hello World
-    }
-}
+String s1 = "Hello";
+String s2 = " World";
+String result = s1.concat(s2);  // result = "Hello World"
 ```
-
----
 
 ## 2. `replace()`
 **Definition:**
@@ -82,36 +74,22 @@ String replace(char oldChar, char newChar)
 
 **Example:**
 ```java
-public class ReplaceExample {
-    public static void main(String[] args) {
-        String text = "java";
-        String result = text.replace('a', 'o');
-        System.out.println(result); // Output: jovo
-    }
-}
+String text = "java";
+String result = text.replace('a', 'o');  // result = "jovo"
 ```
-
----
 
 ## 3. `charAt()`
 **Definition:**
 ```java
 char charAt(int index)
 ```
-- Returns the character at a specific index (starting at `0`).
+- Returns the character at a specific index (starting at 0).
 
 **Example:**
 ```java
-public class CharAtExample {
-    public static void main(String[] args) {
-        String word = "Java";
-        char ch = word.charAt(2);
-        System.out.println(ch); // Output: v
-    }
-}
+String word = "Java";
+char ch = word.charAt(2);  // ch = 'v'
 ```
-
----
 
 ## 4. `length()`
 **Definition:**
@@ -122,33 +100,23 @@ int length()
 
 **Example:**
 ```java
-public class LengthExample {
-    public static void main(String[] args) {
-        String text = "Programming";
-        int len = text.length();
-        System.out.println(len); // Output: 11
-    }
-}
+String text = "Programming";
+int len = text.length();  // len = 11
 ```
 
 **Full method list:** [Java String API](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)
 
 ### How to Read a Method Definition
 
-**Example 1:**
-
 ```java
 String replace(char oldChar, char newChar)
 ```
 
-* Method name: `replace`
-* Return type: `String`
-* Parameters:
-
-  1. `oldChar` (type `char`) → character to replace
-  2. `newChar` (type `char`) → character to replace with
-
-**Example 2:**
+- Method name: `replace`
+- Return type: `String`
+- Parameters:
+  1. `oldChar` (char)
+  2. `newChar` (char)
 
 ```java
 boolean methodName(int x, String y) {
@@ -156,10 +124,25 @@ boolean methodName(int x, String y) {
 }
 ```
 
-* Method name: `methodName`
-* Return type: `boolean`
-* Parameters:
+- Method name: `methodName`
+- Return type: `boolean`
+- Parameters:
+  1. `x` (int)
+  2. `y` (String)
+- Method body: code inside `{ ... }`
 
-  1. `x` (type `int`)
-  2. `y` (type `String`)
-* Method body: code inside `{ ... }` is executed when the method is called
+### Invoking Methods
+Class Definition
+```java
+class Car {
+    void startEngine() {
+        System.out.println("Engine started!");
+    }
+}
+```
+
+Invoking method using dot(`.`) follwed by methodName();
+```java
+Car myCar = new Car();   // create object
+myCar.startEngine();     // invoke the method
+```
