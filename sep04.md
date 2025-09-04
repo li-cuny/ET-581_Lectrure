@@ -48,6 +48,7 @@ System.out.println(str2.compareTo(str1)); // positive number (banana > apple)
  String sentence = "Hello world Java";
  int index = sentence.indexOf("world");
  System.out.println(sentence.substring(index));
+ //output:world Java
 ```
 ---
 
