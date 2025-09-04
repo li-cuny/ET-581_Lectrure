@@ -105,6 +105,8 @@ switch(day) {
 - `"Hello world Java"` — how can we separate each word?
 - `StringTokenizer` breaks a string into smaller parts (tokens) using **delimiters** (default: space " ")
 ```java
+import java.util.StringTokenizer;
+
 String sentence = "Hello world Java";
 StringTokenizer st = new StringTokenizer(sentence);// default delimiter " " space
 System.out.println(st.nextToken()); // Hello
