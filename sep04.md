@@ -66,7 +66,7 @@ System.out.println(!a);     // false
 ## 4. Conditional Statements
 
 ### if
-if (condition) statement; // or blocks {} which is group of statements;
+**if (condition) statement;** // or **blocks** `{...}` which is group of statements;
 ```java
 int score = 85;
 if(score >= 90) {
