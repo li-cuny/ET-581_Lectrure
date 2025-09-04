@@ -28,21 +28,27 @@ System.out.println(s1.equals(s2)); // false
 
 ## 2. String Methods
 
-- `equals()` : Check if two strings are the same
+- `.equals()` : Check if two strings are the same
 ```java
 String str1 = "Java";
 String str2 = "Java";
 System.out.println(str1.equals(str2)); // true
 ```
 
-- `compareTo()` : Lexicographic comparison (used for sorting)
+- `.compareTo()` : Lexicographic comparison (used for sorting)
 ```java
 String str1 = "apple";
 String str2 = "banana";
 System.out.println(str1.compareTo(str2)); // negative number (apple < banana)
 System.out.println(str2.compareTo(str1)); // positive number (banana > apple)
 ```
-
+- `.indexOf(String s)` : first occurrence of the specified string
+- `.substring(int index)` : return  substring index to end
+```java
+ String sentence = "Hello world Java";
+ int index = sentence.indexOf("world");
+ System.out.println(sentence.substring(index));
+```
 ---
 
 ## 3. Logical Operators
