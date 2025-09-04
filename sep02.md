@@ -141,7 +141,7 @@ class Car {
 }
 ```
 
-Invoking method using dot(`.`) follwed by methodName();
+Invoking method using dot(`.`) followed by methodName();
 ```java
 Car myCar = new Car();   // create object
 myCar.startEngine();     // invoke the method
