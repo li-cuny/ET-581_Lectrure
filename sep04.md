@@ -101,3 +101,15 @@ switch(day) {
 }
 // Output: Tuesday
 ```
+ ## StringTokenizer
+- `"Hello world Java"` — how can we separate each word?
+- `StringTokenizer` breaks a string into smaller parts (tokens) using **delimiters** (default: space " ")
+```java
+String sentence = "Hello world Java";
+StringTokenizer st = new StringTokenizer(sentence);// default delimiter " " space
+System.out.println(st.nextToken()); // Hello
+
+String data = "apple,banana,orange";
+StringTokenizer st = new StringTokenizer(data, ","); // using "," as separator
+System.out.println(st.nextToken()); // apple
+```
