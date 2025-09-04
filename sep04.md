@@ -116,10 +116,10 @@ switch(day) {
 import java.util.StringTokenizer;
 
 String sentence = "Hello world Java";
-StringTokenizer st = new StringTokenizer(sentence);// default delimiter " " space
-System.out.println(st.nextToken()); // Hello
+StringTokenizer st1 = new StringTokenizer(sentence);// default delimiter " " space
+System.out.println(st1.nextToken()); // Hello
 
 String data = "apple,banana,orange";
-StringTokenizer st = new StringTokenizer(data, ","); // using "," as separator
-System.out.println(st.nextToken()); // apple
+StringTokenizer st2 = new StringTokenizer(data, ","); // using "," as separator
+System.out.println(st2.nextToken()); // apple
 ```
