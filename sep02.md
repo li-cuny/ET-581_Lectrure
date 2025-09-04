@@ -54,7 +54,7 @@ String str2 = "string";
 ## 1. `concat()`
 **Definition:**
 ```java
-String concat(String str)
+String concat(String str);
 ```
 - Joins the given string to the end of another string.
 
@@ -81,7 +81,7 @@ String result = text.replace('a', 'o');  // result = "jovo"
 ## 3. `charAt()`
 **Definition:**
 ```java
-char charAt(int index)
+char charAt(int index);
 ```
 - Returns the character at a specific index (starting at 0).
 
@@ -109,7 +109,7 @@ int len = text.length();  // len = 11
 ### How to Read a Method Definition
 
 ```java
-String replace(char oldChar, char newChar)
+String replace(char oldChar, char newChar);
 ```
 
 - Method name: `replace`
