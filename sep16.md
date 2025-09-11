@@ -1,4 +1,4 @@
-# Java Random Number Cheat Sheet
+# Java Random Number
 
 ## Math.random()
 - **Type:** Static method
