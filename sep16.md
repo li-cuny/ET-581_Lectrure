@@ -20,7 +20,6 @@ Type: Class, need to create instance
 
 Can generate: int, double, boolean, float, long
 
-Optional seed for reproducible sequences
 ### Examples
 ```java
 import java.util.Random;
