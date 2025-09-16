@@ -5,7 +5,7 @@
 - Access with [row][col]
 - Use nested loops
 
-### Example 1:
+### Example:
 ```java
 int[][] matrix = {
     {1, 2, 3},
@@ -15,7 +15,7 @@ int[][] matrix = {
 System.out.println(matrix[0][1]); // prints 2
 ```
 
-### Example 2:
+### Example:
 ```java
 int[][] a = {
     {1, 2, 3, 4},
@@ -35,7 +35,7 @@ for(int i = 0; i < a.length; i++){
 
 # Shallow Copy vs Deep Copy in Java
 
-## 🔹 1. Shallow Copy
+## 🔹 Shallow Copy
 A **shallow copy** copies only the **reference** of the array. Both variables point to the **same array**.
 
 ### Example:
@@ -50,7 +50,7 @@ System.out.println(a[0]); // 99 (changed in both)
 
 ---
 
-## 🔹 2. Deep Copy
+## 🔹 Deep Copy
 A **deep copy** creates a **new array** and copies the values. Each variable has an **independent copy**.
 
 ### Example:
