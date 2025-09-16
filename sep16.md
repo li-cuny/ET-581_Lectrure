@@ -25,6 +25,34 @@ int[][] matrix = {
 
 System.out.println(matrix[0][1]); // prints 2
 ```
+## 3. create 2D Arrays in different ways
+
+### a. Using Array Literals (Immediate Initialization)
+
+You define the values at the same time you create the array.
+```java
+int[][] arr = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+};
+// Jagged array
+int[][] jagged = {
+    {1, 2, 3},
+    {4, 5},
+    {6, 7, 8}
+};
+```
+### b. `new` Keyword with Size
+```java
+int[][] arr = new int[3][4]; // 3 rows, 4 columns
+// jagged
+int[][] jagged = new int[3][]; // 3 rows, column size not defined yet
+jagged[0] = new int[2]; // row 0 has 2 columns
+jagged[1] = new int[4]; // row 1 has 4 columns
+jagged[2] = new int[1]; // row 2 has 1 column
+```
+
 
 ### Nested Loop Example:
 ```java
