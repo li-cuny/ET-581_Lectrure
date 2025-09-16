@@ -1,9 +1,20 @@
 # Java Arrays and Related Concepts
 
-## 7. Multi-Dimensional Arrays
-- Array of arrays (e.g., 2D tables)
-- Access with [row][col]
-- Use nested loops
+## 1. Correct Ways to Create Arrays
+
+| Way | Syntax | Notes |
+|-----|-------|------|
+| With values | `int[] a = {1, 2, 3};` <br> or `int[] a = new int[]{1, 2, 3};` ✅ | Use when you know values |
+| With size only | `int[] a = new int[3];` ✅ | Creates array with default values (`0` for int) |
+| Size + values | `int[] a = new int[3]{1,2,3};` ❌ | Not allowed in Java |
+
+---
+
+## 2. Multi-Dimensional Arrays
+
+- Essentially arrays of arrays (e.g., 2D tables).
+- Access elements with `[row][col]`.
+- Use **nested loops** to traverse.
 
 ### Example:
 ```java
@@ -15,13 +26,13 @@ int[][] matrix = {
 System.out.println(matrix[0][1]); // prints 2
 ```
 
-### Example:
+### Nested Loop Example:
 ```java
 int[][] a = {
     {1, 2, 3, 4},
     {4, 5, 6, 7},
     {7, 8, 9, 10}
-}; // a[3][4]
+}; // 3 rows, 4 columns
 
 for(int i = 0; i < a.length; i++){
     for(int j = 0; j < a[i].length; j++){
@@ -33,52 +44,45 @@ for(int i = 0; i < a.length; i++){
 
 ---
 
-# Shallow Copy vs Deep Copy in Java
+## 3. Shallow Copy vs Deep Copy
 
-## 🔹 Shallow Copy
-A **shallow copy** copies only the **reference** of the array. Both variables point to the **same array**.
-
-### Example:
+### Shallow Copy
+- Copies **reference only**.
+- Both variables point to the **same array**.
 ```java
 int[] a = {1, 2, 3};
 int[] b = a;  // shallow copy
 b[0] = 99;
 
-System.out.println(a[0]); // 99 (changed in both)
+System.out.println(a[0]); // 99
 ```
-- `a` and `b` refer to the **same array**.  
 
----
-
-## 🔹 Deep Copy
-A **deep copy** creates a **new array** and copies the values. Each variable has an **independent copy**.
-
-### Example:
+### Deep Copy
+- Creates a **new array** and copies all values.
+- Arrays are **independent**.
 ```java
 int[] a = {1, 2, 3};
 int[] b = new int[a.length];
 
 for (int i = 0; i < a.length; i++) {
-    b[i] = a[i];   // copy each element
+    b[i] = a[i];
 }
 
 b[0] = 99;
 
-System.out.println(a[0]); // 1 (unchanged)
+System.out.println(a[0]); // 1
 System.out.println(b[0]); // 99
 ```
-- `a` and `b` are **separate arrays**.
 
 ---
 
-## 8. Arrays Utility Class
-Java provides `java.util.Arrays` with static methods to simplify array operations.
+## 4. Arrays Utility Class (`java.util.Arrays`)
 
 | Method | Description | Example |
 |--------|-------------|---------|
-| `Arrays.fill(array, value)` | Fill array with a value | `Arrays.fill(arr, 1);` |
+| `Arrays.fill(array, value)` | Fill array with value | `Arrays.fill(arr, 1);` |
 | `Arrays.sort(array)` | Sort array ascending | `Arrays.sort(arr);` |
-| `Arrays.copyOf(array, newLength)` | Copy array to new size | `int[] newArr = Arrays.copyOf(arr, 10);` |
+| `Arrays.copyOf(array, newLength)` | Copy array with new size | `int[] newArr = Arrays.copyOf(arr, 10);` |
 | `Arrays.equals(arr1, arr2)` | Compare 1D arrays | `Arrays.equals(arr1, arr2);` |
 | `Arrays.toString(array)` | Convert 1D array to string | `System.out.println(Arrays.toString(arr));` |
 | `Arrays.deepEquals(arr1, arr2)` | Compare multidimensional arrays | `Arrays.deepEquals(matrix1, matrix2);` |
@@ -86,14 +90,8 @@ Java provides `java.util.Arrays` with static methods to simplify array operation
 
 ---
 
-## More Examples of For Loops
+## 5. Sorting Arrays (Bubble Sort Example)
 
-### Implement Array Methods
-- Fill array  
-- Copy array to larger size  
-
-### Sorting
-- Sort array (Bubble Sort)
 ```java
 int[] arr = {5, 3, 8, 4, 2};
 int n = arr.length;
@@ -108,39 +106,26 @@ for (int i = 0; i < n - 1; i++) {
     }
 }
 
-System.out.println(Arrays.toString(arr));
+System.out.println(Arrays.toString(arr)); // [2, 3, 4, 5, 8]
 ```
-- **Idea:** After each pass, the largest unsorted element “bubbles up” to its correct position.
 
-### Print Patterns
-- Print triangles using loops
+- **Idea:** Largest unsorted element “bubbles up” after each pass.
 
 ---
 
-## Java Random Numbers
+## 6. Generating Random Numbers
 
-### Math.random()
-- **Type:** Static method  
-- **Returns:** double (0.0 ≤ x < 1.0)  
-- Simple, no object needed
-
-#### Examples:
+### Using `Math.random()`
 ```java
-// Random double between 0.0 and 1.0
 double r = Math.random();
-
-// Random int between 0 and 9
-int n = (int)(Math.random() * 10);
+int n = (int)(Math.random() * 10); // 0 to 9
 ```
 
-### Random Class (java.util.Random)
-- **Type:** Class, requires instance  
-- Can generate: int, double, boolean, float, long
-
-#### Examples:
+### Using `Random` Class
 ```java
 import java.util.Random;
-Random rand = new Random(); // or new Random(seed)
+
+Random rand = new Random();
 
 // Random double 0.0 <= x < 1.0
 double rDouble = rand.nextDouble();
@@ -151,3 +136,7 @@ int rInt = rand.nextInt(10);
 // Random boolean
 boolean rBool = rand.nextBoolean();
 ```
+- More versatile than `Math.random()`.
+- Can set a **seed** for reproducible results.
+
+---
