@@ -25,6 +25,22 @@ int[][] matrix = {
 
 System.out.println(matrix[0][1]); // prints 2
 ```
+
+### Nested Loop Example:
+```java
+int[][] a = {
+    {1, 2, 3, 4},
+    {4, 5, 6, 7},
+    {7, 8, 9, 10}
+}; // 3 rows, 4 columns
+
+for(int i = 0; i < a.length; i++){
+    for(int j = 0; j < a[i].length; j++){
+        System.out.print(a[i][j] + " ");
+    }
+    System.out.println();
+}
+```
 ## 3. create 2D Arrays in different ways
 
 ### a. Using Array Literals (Immediate Initialization)
@@ -53,23 +69,6 @@ jagged[0] = new int[2]; // row 0 has 2 columns
 jagged[1] = new int[4]; // row 1 has 4 columns
 jagged[2] = new int[1]; // row 2 has 1 column
 // [[0, 0], [0, 0, 0, 0], [0]]
-```
-
-
-### Nested Loop Example:
-```java
-int[][] a = {
-    {1, 2, 3, 4},
-    {4, 5, 6, 7},
-    {7, 8, 9, 10}
-}; // 3 rows, 4 columns
-
-for(int i = 0; i < a.length; i++){
-    for(int j = 0; j < a[i].length; j++){
-        System.out.print(a[i][j] + " ");
-    }
-    System.out.println();
-}
 ```
 
 ---
