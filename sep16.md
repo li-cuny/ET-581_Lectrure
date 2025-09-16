@@ -48,6 +48,7 @@ int[][] jagged = {
 int[][] arr = new int[3][4]; // 3 rows, 4 columns
 // jagged
 int[][] jagged = new int[3][]; // 3 rows, column size not defined yet
+// [null, null, null]
 jagged[0] = new int[2]; // row 0 has 2 columns
 jagged[1] = new int[4]; // row 1 has 4 columns
 jagged[2] = new int[1]; // row 2 has 1 column
