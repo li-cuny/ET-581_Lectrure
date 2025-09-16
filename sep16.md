@@ -70,12 +70,13 @@ int[][] a = {
 Java provides a built-in utility class `java.util.Arrays` that makes working with arrays easier.  
 It is **static**, so you don’t need to create an object — just call its methods directly.
 
-| Method                            | Description                         | Example                                     |
-|-----------------------------------|-------------------------------------|---------------------------------------------|
-| `Arrays.fill(array, value)`       | Fill array with a value             | `Arrays.fill(arr, 1);`                      |
-| `Arrays.toString(array)`          | Convert array to a string           | `System.out.println(Arrays.toString(arr));` |
-| `Arrays.sort(array)`              | Sort array in ascending order       | `Arrays.sort(arr);`                         |
-| `Arrays.copyOf(array, newLength)` | Copy array to new size              | `int[] newArr = Arrays.copyOf(arr, 10);`    |
-| `Arrays.equals(arr1, arr2)`       | Compare two arrays                  | `Arrays.equals(arr, arr2);`                 |
-
----
+| Method                              | Description                                | Example                                                  |
+|-------------------------------------|--------------------------------------------|----------------------------------------------------------|
+| `Arrays.fill(array, value)`         | Fill array with a value                    | `Arrays.fill(arr, 1);`                                   |
+| `Arrays.sort(array)`                | Sort array in ascending order              | `Arrays.sort(arr);`                                      |
+| `Arrays.copyOf(array, newLength)`   | Copy array to new size                     | `int[] newArr = Arrays.copyOf(arr, 10);`                 |
+| `Arrays.equals(arr1, arr2)`         | Compare two **1D arrays**                  | `Arrays.equals(arr1, arr2);`                             |
+| `Arrays.toString(array)`            | Convert **1D array** to a string           | `System.out.println(Arrays.toString(arr));`              |
+| `Arrays.deepEquals(arr1, arr2)`     | Compare two **multidimensional arrays**    | `Arrays.deepEquals(matrix1, matrix2);`                   |
+| `Arrays.deepToString(array)`        | Convert **multidimensional array** to text | `System.out.println(Arrays.deepToString(matrix));`       |
+----
