@@ -26,7 +26,7 @@ int[][] matrix = {
 System.out.println(matrix[0][1]); // prints 2
 ```
 
-### Nested Loop Example:
+### Nested Loop traverse Example:
 ```java
 int[][] a = {
     {1, 2, 3, 4},
