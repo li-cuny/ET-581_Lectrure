@@ -141,7 +141,17 @@ System.out.println(Arrays.toString(arr)); // [2, 3, 4, 5, 8]
 - **Idea:** Largest unsorted element “bubbles up” after each pass.
 
 ---
-
+## More for loops
+using nested for loop to print pattern
+```java
+Top-Left Triangle:
+* * * * * 
+* * * * 
+* * * 
+* * 
+* 
+```
+---
 ## 6. Generating Random Numbers
 
 ### Using `Math.random()`
