@@ -65,10 +65,11 @@ so it becomes
 
 ``` java
 for (int r = 0; r < arr.length; r++) {          // loop over rows
-    for (int c = 0; c < arr[r].length; c++) {   // loop over columns in that row
+    // print a single row
+    for (int c = 0; c < arr[r].length; c++) {   // loop over columns 
         System.out.print(arr[r][c] + " ");
     }
-    System.out.println(); // new line after each row
+    System.out.println(); // add new line after each row
 }
 ```
 
