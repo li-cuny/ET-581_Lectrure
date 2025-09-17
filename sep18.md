@@ -84,9 +84,9 @@ for (int r = 0; r < arr.length; r++) {          // loop over rows
 
 ## Key Points
 
--   `arr.length` → number of rows.\
--   `arr[r].length` → number of columns in row `r`.\
--   Outer loop (`r`) = rows.\
+-   `arr.length` → number of rows.
+-   `arr[r].length` → number of columns in row `r`.
+-   Outer loop (`r`) = rows
 -   Inner loop (`c`) = columns.
 
 
