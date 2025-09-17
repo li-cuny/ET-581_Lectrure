@@ -48,7 +48,7 @@ for(int r=0;r<arr.length; r++){// row 0 -> row2
     // print a single row
 }
 ```
-replace cmment with print single row code will become
+adding print single row logic at `//print a single row` comment
 ```java
 for(int r=0;r<arr.length; r++){// row 0 -> row2
     // print a single row
