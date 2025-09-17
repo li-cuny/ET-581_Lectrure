@@ -1,4 +1,4 @@
-# Nested For Loops in 2D Arrays (Java)
+# Nested For Loops in 2D Arrays 
 
 ## Example Array
 
