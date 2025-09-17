@@ -17,7 +17,7 @@ int[][] arr = {
 ### First Row
 
 ``` java
-int[] firstRow = arr[0];
+int[] firstRow = arr[0]; // first elment of 2d array which is {1, 2, 3},
 for (int c = 0; c < firstRow.length; c++) {
     System.out.print(firstRow[c] + " ");
 }
@@ -26,7 +26,7 @@ for (int c = 0; c < firstRow.length; c++) {
 ### Second Row
 
 ``` java
-int[] secondRow = arr[1];
+int[] secondRow = arr[1]; // second elment of 2d array which is  {4, 5, 6},
 for (int c = 0; c < secondRow.length; c++) {
     System.out.print(secondRow[c] + " ");
 }
@@ -35,7 +35,7 @@ for (int c = 0; c < secondRow.length; c++) {
 ### Third Row
 
 ``` java
-int[] thirdRow = arr[2];
+int[] thirdRow = arr[2]; // third elment of 2d array which is   {7, 8, 9}
 for (int c = 0; c < thirdRow.length; c++) {
     System.out.print(thirdRow[c] + " ");
 }
