@@ -66,18 +66,12 @@ double square(double x);
 
 ---
 
-## Exercises (Highlights)
-1. Prime test (basic & optimized).  
-2. Roots (square, cube, fourth).  
-3. Power function (n1^n2).  
-4. Factorial function.  
-5. Quadratic formula solver.  
-6. Dice roll simulation (1–6).  
-7. Triangle sum, smallest factor.  
-8. Reverse integer.  
-9. Prime factorization.  
-10. Array min & average (1D, 2D).  
-11. Magic square checker (3×3).  
+## Exercises 
+  
+* Power function 
+*  Dice roll simulation (1–6).  
+*  Array min & average (1D, 2D).  
+
 
 ---
 
