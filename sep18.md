@@ -150,7 +150,7 @@ we use another `for` loop to handle multiple passes.
 
 ```java
 for (int i = 0; i < arr.length; i++) { // repeat n times
-    // bubble one number up
+    // sort one number to the location
     for (int j = 0; j < arr.length - 1; j++) { 
         int a = arr[j];
         int b = arr[j + 1];
