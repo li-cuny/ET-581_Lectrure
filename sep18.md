@@ -191,3 +191,30 @@ It can be optimized further by reducing inner loop length each pass (`arr.length
 
 Thus, for the inner loop we use `arr.length - i` for sorting each number.  
 ⚠️ Remember to subtract `1` (`arr.length - i - 1`) because `b = arr[j+1]` otherwise it will go out of the array boundary.
+
+# more loops
+## print patterns
+using nested for loop to print pattern
+```java
+Top-Left Triangle:
+* * * * * 
+* * * * 
+* * * 
+* * 
+* 
+```
+## print array in column
+given array
+```java
+int[][] arr = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+};
+```
+output/print
+```
+1 4 7
+2 5 8
+3 6 9
+```
