@@ -90,6 +90,86 @@ for (int r = 0; r < arr.length; r++) {          // loop over rows
 -   Outer loop (`r`) = rows
 -   Inner loop (`c`) = columns.
 
-# Bubble Sort 
+# Bubble Sort  
 
+## Example Array
+```java
+int[] arr = {5, 2, 9, 1, 3};
+```
 
+---
+
+## Sort Manually  
+
+### Step 1: Sort first number  
+Goal: bubble the largest number (`9`) to the end → `[*, *, *, *, 9]`  
+
+```java
+for (int j = 0; j < arr.length - 1; j++) { 
+    int a = arr[j];      // current number
+    int b = arr[j + 1];  // next number
+    if (a > b) {
+        // swap arr[j] and arr[j+1]
+    }
+}
+```
+
+⚠️ Note: the condition is `j < arr.length - 1`, not `i < arr.length - 1`,  
+because `b = arr[j+1]` could go out of bounds.  
+
+After this loop, the biggest value (`9`) is at the end.  
+
+---
+
+### Step 2: Sort second number  
+Goal: bubble the second-biggest (`5`) to the second-to-last spot → `[*, *, *, 5, 9]`  
+
+```java
+for (int j = 0; j < arr.length - 1; j++) { 
+    int a = arr[j];
+    int b = arr[j + 1];
+    if (a > b) {
+        // swap arr[j] and arr[j+1]
+    }
+}
+```
+
+---
+
+### Step 3: Sort the rest  
+- Bubble `3` → `[*, *, 3, 5, 9]`  
+- Bubble `2` → `[*, 2, 3, 5, 9]`  
+- Bubble `1` → `[1, 2, 3, 5, 9]`  
+
+---
+
+## Using Nested Loops  
+
+Instead of repeating the same loop for each number,  
+we use another `for` loop to handle multiple passes.  
+
+```java
+for (int i = 0; i < arr.length; i++) { // repeat n times
+    // bubble one number up
+    for (int j = 0; j < arr.length - 1; j++) { 
+        int a = arr[j];
+        int b = arr[j + 1];
+        if (a > b) {
+            // swap arr[j] and arr[j+1]
+        }
+    }
+}
+```
+
+---
+
+## Final Output
+After all passes:  
+```
+[1, 2, 3, 5, 9]
+```
+
+---
+
+✅ This is the **simple version of bubble sort**.  
+It can be optimized further by reducing inner loop length each pass (`arr.length - i - 1`) and stopping early if no swaps happen.
