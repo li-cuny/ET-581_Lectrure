@@ -188,5 +188,5 @@ It can be optimized further by reducing inner loop length each pass (`arr.length
 | Bubble 1   | [*, 2, 3, 5, 9]   | 4 numbers [2, 3, 5, 9] |
 | Bubble one number   | [*, *, ..., s,...,s]    | i numbers [s,...,s] |
 
-Thus, for the inner loop we use `arr.length - i` for sorting each pass.  
+Thus, for the inner loop we use `arr.length - i` for sorting each number.  
 ⚠️ Remember to subtract `1` (`arr.length - i - 1`) because `b = arr[j+1]` otherwise it will go out of the array boundary.
