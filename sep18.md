@@ -147,7 +147,7 @@ for (int j = 0; j < arr.length - 1; j++) {
 ## Using Nested Loops  
 
 Instead of repeating the same loop for each number,  
-we use another `for` loop to handle multiple passes.  
+we use another `for` loop to handle repeated sort on number.  
 
 ```java
 for (int i = 0; i < arr.length; i++) { // repeat n times
