@@ -160,7 +160,12 @@ for (int i = 0; i < arr.length; i++) { // repeat n times
     }
 }
 ```
-
+swapping numbers in `arr[j]` and `arr[j+1]`
+```java
+int temp = arr[j];
+arr[j] = arr[j + 1];
+arr[j + 1] = temp;
+```
 ---
 
 ## Final Output
@@ -173,3 +178,15 @@ After all passes:
 
 ✅ This is the **simple version of bubble sort**.  
 It can be optimized further by reducing inner loop length each pass (`arr.length - i - 1`) and stopping early if no swaps happen.
+
+| Step        | Array before the Bubble | Already Sorted Elements |
+|------------|------------------|------------------------|
+| Bubble 9   | [*, *, *, *, *]   | 0 numbers []           |
+| Bubble 5   | [*, *, *, *, 9]   | 1 number [9]           |
+| Bubble 3   | [*, *, *, 5, 9]   | 2 numbers [5, 9]       |
+| Bubble 2   | [*, *, 3, 5, 9]   | 3 numbers [3, 5, 9]    |
+| Bubble 1   | [*, 2, 3, 5, 9]   | 4 numbers [2, 3, 5, 9] |
+| Bubble one number   | [*, *, ..., s,...,s]    | i numbers [s,...,s] |
+
+Thus, for the inner loop we use `arr.length - i` for sorting each pass.  
+⚠️ Remember to subtract `1` (`arr.length - i - 1`) because `b = arr[j+1]` otherwise it will go out of the array boundary.
