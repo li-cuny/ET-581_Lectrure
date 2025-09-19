@@ -1,16 +1,5 @@
 # Java Lecture 5: Functions & Methods
 
-## Math Class in Java
-- `Math.max(x,y)` → maximum of x and y  
-- `Math.min(x,y)` → minimum of x and y  
-- `Math.sqrt(x)` → square root of x  
-- `Math.pow(x,y)` → x raised to power y  
-- `Math.abs(x)` → absolute value of x  
-- `Math.random()` → random number [0.0, 1.0)  
-- `(int)(Math.random() * 101)` → random number [0,100]  
-
----
-
 ## Methods / Functions
 - A block of code executed when called.
 - Benefits: code reuse.

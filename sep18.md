@@ -218,3 +218,55 @@ output/print
 2 5 8
 3 6 9
 ```
+---
+
+## Math Class in Java
+- `Math.max(x,y)` → maximum of x and y  
+- `Math.min(x,y)` → minimum of x and y  
+- `Math.sqrt(x)` → square root of x  
+- `Math.pow(x,y)` → x raised to power y  
+- `Math.abs(x)` → absolute value of x  
+- `Math.random()` → random number [0.0, 1.0)  
+- `(int)(Math.random() * 101)` → random number [0,100]  
+
+---
+
+## Methods / Functions
+- A block of code executed when called.
+- Benefits: code reuse.
+- Must be defined inside a class.
+
+### Syntax
+```java
+public class Main {
+    static void myMethod() {
+        // code
+    }
+}
+```
+
+### Parameters & Arguments
+- Parameters → variables inside methods.  
+- Arguments → values passed when calling.  
+
+Example:
+```java
+static void greet(String name) {
+    System.out.println("Hello " + name);
+}
+```
+
+### Return Values
+- Use a return type instead of `void`.  
+```java
+static int add(int a, int b) {
+    return a + b;
+}
+```
+
+### Method Overloading
+- Same method name, different parameter list.
+```java
+int square(int x);
+double square(double x);
+```
