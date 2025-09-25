@@ -161,8 +161,6 @@ doubleValue(numbers);
 
 ---
 
-## Exercises 
+## Demo 
   
-* Power function 
-* Dice roll simulation (1–6).  
-* Array min & average (1D, 2D).  
+* https://github.com/li-cuny/ET-581_Demo/blob/main/L5/Ex01_Math.java 
