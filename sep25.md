@@ -140,20 +140,29 @@ int x = 10;
 
 ---
 
-## Arrays & Functions
-- Pass element: `arr[i]`  
+## Arrays & Method
+- Pass single element: `arr[i]`  
+```java
+void doubleValue(int n) {
+    n = n * 2; // only changes local copy
+}
+int[] numbers = {1, 2, 3};
+doubleValue(numbers[0]);
+```
 - Pass entire array: `int[] arr`  
-- Arrays are reference types → methods can modify them.
+```java
+void doubleValue(int[] arr) {
+    arr[0] = arr[0] * 2; // modifies original array
+}
+int[] numbers = {1, 2, 3};
+doubleValue(numbers);
+```
+- the array variable just hold a reference (address) of original array.
 
 ---
 
 ## Exercises 
   
 * Power function 
-*  Dice roll simulation (1–6).  
-*  Array min & average (1D, 2D).  
-
-
----
-
-✅ **Focus**: Methods, parameters, return values, overloading, scope, arrays, and Math class usage.
+* Dice roll simulation (1–6).  
+* Array min & average (1D, 2D).  
