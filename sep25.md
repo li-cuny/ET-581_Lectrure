@@ -34,10 +34,25 @@ static int add(int a, int b) {
 ```
 
 ### Method Overloading
-- Same method name, different parameter list.
+- having multiple methods with the same name but different parameters in the same class.
+
 ```java
 int square(int x);
 double square(double x);
+```
+
+
+* Overloading methoed is determined at compile time.
+
+* Return type alone cannot distinguish overloaded methods.
+```java
+static int add(int a, int b) {
+    return a + b;
+}
+static double add(int a, int b) {
+    return (double) a + b;
+}
+//error: method add(int,int) is already defined
 ```
 
 ---
