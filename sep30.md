@@ -1,4 +1,4 @@
-## 1. Classes & Objects
+## Classes & Objects
 
 ## 1. What is a Class?
 - A **class** is a **blueprint** for creating objects.  
