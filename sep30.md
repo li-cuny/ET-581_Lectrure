@@ -79,35 +79,8 @@ Car car1 = new Car();   // object creation
 
 ```
 
-## 3. Constructor
-- A **constructor** is a special method that runs when an object is created.  
-- Used to initialize fields.  
 
-**Example:**
-```java
-class Car {
-    String color;
-    int year;
-
-    // Constructor
-    Car(String c, int y) {
-        color = c;
-        year = y;
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Car myCar = new Car("Blue", 2022); // constructor runs
-        System.out.println(myCar.color + " " + myCar.year);
-    }
-}
-```
-
-4. Key Points About this
----
-
-## 4. Key Points
+#### Key Points
 - **Class = Blueprint**  
 - **Object = Instance of a class**  
 - **Fields = Variables inside a class**  
@@ -117,10 +90,6 @@ public class Main {
 ---
 
 
-
----
-
-## 6. Exercises
 
 ### Exercise 1
 Create a `Student` class with:
@@ -144,44 +113,11 @@ Write a `Book` class with:
 
 Create 3 book objects and call their method.  
 
----
-
-✅ **Tip for Students:** Think of a **class as a recipe** and an **object as the actual dish** made from it.
-
-------------------------------------------------------------------------
-
-## 2. Multiple Objects
-
-``` java
-class Car {
-    String brand;
-    int speed;
-
-    void show() {
-        System.out.println(brand + " runs at " + speed + " km/h");
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Car c1 = new Car();
-        c1.brand = "Toyota";
-        c1.speed = 120;
-
-        Car c2 = new Car();
-        c2.brand = "BMW";
-        c2.speed = 200;
-
-        c1.show(); // Toyota runs at 120 km/h
-        c2.show(); // BMW runs at 200 km/h
-    }
-}
-```
-
-------------------------------------------------------------------------
+------------------------------------
 
 ## 3. Constructors
-
+- A **constructor** is a special method that runs when an object is created.  
+- Used to initialize fields.  
 ### Default Constructor Example
 
 ``` java
