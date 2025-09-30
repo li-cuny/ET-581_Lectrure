@@ -1,9 +1,4 @@
-# Java Lecture 6 -- Classes & OOP Concepts 
-
 ## 1. Classes & Objects
-# 📝 Java Classes and Objects
-
----
 
 ## 1. What is a Class?
 - A **class** is a **blueprint** for creating objects.  
