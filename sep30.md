@@ -35,37 +35,38 @@ public class Main {
     }
 }
 ```
-Method Area
+### Method Area
 
-Stores class bytecode and method code (drive()).
+* Stores class bytecode and method code (drive()).
 
-Shared by all Car objects.
-
+* Shared by all Car objects.
+```java
 Method Area:
  └─ Class: Car
      └─ Method: drive()
-Heap
+```
+### Heap
 
-Stores object instances with their instance fields.
-
+* Stores object instances with their instance fields.
+```java
 Heap:
  └─ Object#1: Car (myCar)
       ├─ color → "Red"
       └─ year  → 2020
-Stack
+```
+### Stack
 
-Stores local variables and method call frames.
-
+* Stores local variables and method call frames.
+```java
 Stack:
  └─ main() frame
      ├─ local variable: myCar → reference to Object#1
 
-
  └─ drive() frame (when myCar.drive() is called)
      ├─ hidden parameter: this → Object#1
-
+```
 ---
- Multiple Objects 
+### Multiple Objects 
 ```java
 Car car1 = new Car();   // object creation
         car1.color = "Red";
