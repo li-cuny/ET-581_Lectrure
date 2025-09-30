@@ -260,31 +260,7 @@ public class Main {
 
 ------------------------------------------------------------------------
 
-## 7. Wrapper Classes
-
-``` java
-public class Main {
-    public static void main(String[] args) {
-        int primitive = 10;
-
-        // Boxing (int → Integer)
-        Integer obj = Integer.valueOf(primitive);
-
-        // Unboxing (Integer → int)
-        int value = obj.intValue();
-
-        // Using utility methods
-        int num = Integer.parseInt("123");
-
-        System.out.println(obj);   // 10
-        System.out.println(value); // 10
-        System.out.println(num);   // 123
-    }
-}
-```
-------------------------------------------------------------------------
-
-## 8. Static vs Non-Static
+## 7. Static vs Non-Static
 * The `static` keyword belongs to the class, not to instances (objects).
 
 * Static members (variables or methods) are shared among all objects of the class.
@@ -315,7 +291,7 @@ public class Main {
 ```
 
 
-## 9. Static Block
+## 8. Static Block
 
 - Runs **only once** — when the class is loaded.
 - Executed **before `main()`** or **before any object of the class is created**.
@@ -335,7 +311,7 @@ class Car {
 
 ---
 
-## 10. Instance Block
+## 9. Instance Block
 
 - An **instance block** (also called an **initializer block**) is a block of code inside a class **without the `static` keyword**.
 - Runs **every time an object is created**, **before the constructor**.
@@ -350,3 +326,26 @@ class Car {
 }
 ```
 
+## 10. Wrapper Classes
+
+``` java
+public class Main {
+    public static void main(String[] args) {
+        int primitive = 10;
+
+        // Boxing (int → Integer)
+        Integer obj = Integer.valueOf(primitive);
+
+        // Unboxing (Integer → int)
+        int value = obj.intValue();
+
+        // Using utility methods
+        int num = Integer.parseInt("123");
+
+        System.out.println(obj);   // 10
+        System.out.println(value); // 10
+        System.out.println(num);   // 123
+    }
+}
+```
+------------------------------------------------------------------------
