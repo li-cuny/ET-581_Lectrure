@@ -201,10 +201,15 @@ public class Main {
 ------------------------------------------------------------------------
 
 ## 5. Encapsulation (Getters & Setters)
+* **Getter**: A method that returns the value of a private field.
+
+* **Setter**: A method that sets or updates the value of a private field.
+
+They are used to encapsulate data, allowing controlled access to `private fields` from `other` classes.
 
 ``` java
 class Account {
-    private double balance;
+    private double balance; // access to private variable
 
     // Getter
     public double getBalance() {
