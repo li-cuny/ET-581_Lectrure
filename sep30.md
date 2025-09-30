@@ -233,34 +233,7 @@ public class Main {
 
 ------------------------------------------------------------------------
 
-## 6. Static vs Non-Static
-
-``` java
-class Counter {
-    static int count = 0; // shared among all objects
-    int id;
-
-    Counter() {
-        count++;
-        id = count;
-    }
-}
-
-public class Main {
-    public static void main(String[] args) {
-        Counter c1 = new Counter();
-        Counter c2 = new Counter();
-        Counter c3 = new Counter();
-        System.out.println("c1 id = " + c1.id); // 1
-        System.out.println("c2 id = " + c2.id); // 2
-        System.out.println("Total objects = " + Counter.count); // 3
-    }
-}
-```
-
-------------------------------------------------------------------------
-
-## 7. `this` Keyword
+## 6. `this` Keyword
 
 ``` java
 class Employee {
@@ -287,7 +260,7 @@ public class Main {
 
 ------------------------------------------------------------------------
 
-## 8. Wrapper Classes
+## 7. Wrapper Classes
 
 ``` java
 public class Main {
@@ -309,6 +282,39 @@ public class Main {
     }
 }
 ```
+------------------------------------------------------------------------
+
+## 8. Static vs Non-Static
+* The `static` keyword belongs to the class, not to instances (objects).
+
+* Static members (variables or methods) are shared among all objects of the class.
+
+* You can access static members without creating an object.
+
+``` java
+class Counter {
+    static int count = 0; // shared among all objects
+    int id;
+
+    Counter() {
+        count++;
+        id = count;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Counter c1 = new Counter();
+        Counter c2 = new Counter();
+        Counter c3 = new Counter();
+        System.out.println("c1 id = " + c1.id); // 1
+        System.out.println("c2 id = " + c2.id); // 2
+        System.out.println("Total objects = " + Counter.count); // 3
+    }
+}
+```
+
+
 ## 9. Static Block
 
 - Runs **only once** — when the class is loaded.
