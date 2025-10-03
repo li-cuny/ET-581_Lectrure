@@ -72,8 +72,8 @@ Car car1 = new Car();   // object creation
         car1.color = "Red";
         car1.year = 2020;
      Car car2 = new Car();  
-       car2.color = "Red";
-        car2.year = 2020;
+       car2.color = "Blue";
+        car2.year = 2021;
         car1.drive();
         car2.drive();
 
