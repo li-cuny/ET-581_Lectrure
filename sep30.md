@@ -234,6 +234,8 @@ public class Main {
 ------------------------------------------------------------------------
 
 ## 6. `this` Keyword
+The `this` keyword in Java is a reference variable that refers to the current object — the object whose method or constructor is being executed.
+static method can be called without creating an object, there is no `“current object”` for `this` to refer to.
 
 ``` java
 class Employee {
