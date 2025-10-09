@@ -51,7 +51,7 @@ class Child extends Parent {
     }
 }
 ```
-#### Constructor Calls and Inheritance
+#### ➤ Constructor Calls and Inheritance
 When you create a subclass object, the constructor of the parent class is always called first.
 
 If you do not explicitly call a parent constructor using `super()`,
@@ -136,7 +136,7 @@ class Dog extends Animal {
     void sound() { System.out.println("Bark"); }
 }
 ```
-#### Overloading VS. Overriding
+#### ➤ Overloading VS. Overriding
 **Overloading** → “Same name, different forms” → happens in **same class** → compile-time resolution
 
 **Overriding** → “**Subclass**  `replaces` parent behavior” → happens across classes → runtime resolution
