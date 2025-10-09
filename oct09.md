@@ -1,4 +1,4 @@
-## 🧱 2. Inheritance in Java
+## 1. Inheritance in Java
 
 ### ➤ Concept
 - **Inheritance** allows one class to **reuse** the code of another.
@@ -79,9 +79,19 @@ Child() {
     super(); // automatically inserted
 }
 ```
+If the parent class does NOT have a no-argument constructor, and the subclass does not explicitly call super(args), you will get a compile-time error.
+```java
+class Parent {
+    Parent(int x) { }
+}
+
+class Child extends Parent {
+    // ❌ Compiler error: Parent() does not exist
+}
+```
 ---
 
-## 🚫 3. Multiple Inheritance
+## 2. Multiple Inheritance
 - Java **does not support** multiple inheritance using classes to avoid ambiguity.
 
 Example problem:
@@ -95,7 +105,7 @@ Use **interfaces** for multiple inheritance (will be covered later).
 
 ---
 
-## 🤝 4. Aggregation (HAS-A Relationship)
+## 🤝 3. Aggregation (HAS-A Relationship)
 - When one class has a reference to another class.
 
 Example:
@@ -113,25 +123,8 @@ Use **inheritance** for **IS-A**, and **aggregation** for **HAS-A**.
 
 ---
 
-## 🔁 5. Method Overloading
-- Same method name, **different parameters**.
 
-Example:
-```java
-class MathTool {
-    int add(int a, int b) { return a + b; }
-    double add(double a, double b) { return a + b; }
-}
-```
-- Improves **readability** and **code reusability**.
-- Overloading depends on:
-  - Number of parameters
-  - Type of parameters
-- ❌ Return type alone cannot distinguish overloaded methods.
-
----
-
-## 🔄 6. Method Overriding
+## 🔄 4. Method Overriding
 - Same method name and parameters, but **different implementation** in subclass.
 
 Example:
@@ -143,17 +136,17 @@ class Dog extends Animal {
     void sound() { System.out.println("Bark"); }
 }
 ```
+#### Overloading VS. Overriding
+**Overloading** → “Same name, different forms” → happens in **same class** → compile-time resolution
 
-📘 **Rules:**
-- Same name and parameters.
-- Must be in a subclass (**IS-A** relationship).
-- Used for **runtime polymorphism**.
+**Overriding** → “**Subclass**  `replaces` parent behavior” → happens across classes → runtime resolution
+
 
 🧩 **Static methods cannot be overridden.**
 
 ---
 
-## 🧬 7. Covariant Return Type
+## 🧬 5. Covariant Return Type
 - Since Java 5, subclass methods can override a parent method and return a **subtype**.
 
 Example:
@@ -172,7 +165,7 @@ class DogShelter extends AnimalShelter {
 
 ---
 
-## 🧰 8. `super` Keyword
+## 🧰 6. `super` Keyword
 Used to refer to the **parent class**.
 
 Examples:
@@ -186,7 +179,7 @@ super();               // Call parent constructor
 
 ---
 
-## ⚙️ 9. Instance Initializer Block
+## ⚙️ 7. Instance Initializer Block
 - Runs each time an object is created, **after the parent constructor**.
 
 Example:
