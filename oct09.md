@@ -8,13 +8,13 @@
 **Syntax:**
 ```java
 class Parent {
-    void show() { System.out.println("Parent class"); }
+    // Parent field and method
 }
-
 class Child extends Parent {
-    void display() { System.out.println("Child class"); }
+     // Child field and method
 }
 ```
+
 
 📊 **IS-A Relationship:**  
 `Child IS-A Parent`
@@ -22,10 +22,63 @@ class Child extends Parent {
 ---
 
 ### ➤ Inherited Members
-A subclass automatically gets:
-- All **public** and **protected** fields/methods.
-- **Private** members are *not directly inherited* but accessible via public methods.
+When a subclass is created using `extends`, it automatically gets most of the members (fields and methods) of its superclass, except some special cases.
+| Member Type                     | Inherited?                 | Notes                                                                                                                |
+| ------------------------------- | -------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Fields (instance variables)** | ✅ Yes                      | But access depends on the **access modifier** (e.g., `private` not directly accessible).                             |
+| **Instance methods**            | ✅ Yes                      | Can be used or **overridden** in the subclass.                                                                       |
+| **Private members**             | ✅ Yes,  but ⚠️ Not directly accessible | They exist in the object but are **hidden**; accessible only through **public methods** of the superclass. |
+| **Constructors**                | ❌ No                       | Constructors are **never inherited**. A subclass must call one using `super()`.                                      |
+```java
+class Parent {
+    public String a = "a";
+    private String b = "b";
+    public String getB(){
+        return this.b;
+    }
+    private void doubleB(){
+        this.b = this.b + this.b;
+    }
+}
 
+class Child extends Parent {
+    private String c = "c";
+    public void print(){
+        this.a; // visible
+        this.b; // not visible
+        this.getB(); // visible
+        this.doubleB(); // not visible
+    }
+}
+```
+#### Constructor Calls and Inheritance
+When you create a subclass object, the constructor of the parent class is always called first.
+
+If you do not explicitly call a parent constructor using `super()`,
+the compiler automatically inserts a call to the no-argument parent constructor (super();) as the first line of the subclass constructor.
+```java
+class Parent {
+    Parent() {
+        System.out.println("Parent constructor");
+    }
+}
+
+class Child extends Parent {
+    // No constructor explicitly written
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Child c = new Child();
+    }
+}
+```
+ven though Child has no constructor, Java automatically:
+```java
+Child() {
+    super(); // automatically inserted
+}
+```
 ---
 
 ## 🚫 3. Multiple Inheritance
