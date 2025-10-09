@@ -73,7 +73,7 @@ public class Main {
     }
 }
 ```
-ven though Child has no constructor, Java automatically:
+even though Child has no constructor, Java automatically:
 ```java
 Child() {
     super(); // automatically inserted
