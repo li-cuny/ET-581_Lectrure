@@ -328,26 +328,4 @@ class Car {
 }
 ```
 
-## 10. Wrapper Classes
-
-``` java
-public class Main {
-    public static void main(String[] args) {
-        int primitive = 10;
-
-        // Boxing (int → Integer)
-        Integer obj = Integer.valueOf(primitive);
-
-        // Unboxing (Integer → int)
-        int value = obj.intValue();
-
-        // Using utility methods
-        int num = Integer.parseInt("123");
-
-        System.out.println(obj);   // 10
-        System.out.println(value); // 10
-        System.out.println(num);   // 123
-    }
-}
-```
 ------------------------------------------------------------------------
