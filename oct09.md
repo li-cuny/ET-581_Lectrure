@@ -212,8 +212,8 @@ class B extends A {}   // ❌ Error
 | Package | `package`, `import` | Folder-like grouping | `java.util` |
 | Inheritance | `extends` | IS-A | `class Dog extends Animal` |
 | Aggregation | reference field | HAS-A | `Student has Address` |
-| Overloading | same name, diff params | compile-time | `add(int, int)` |
-| Overriding | same name, same params | runtime | `sound()` |
+| Overloading | same name, diff params | compile-time | `add(int); add(int, int);` |
+| Overriding | same name, same params | runtime | `Parent.sound(); Child.sound();` |
 | `super` | access parent | inheritance helper | `super.show()` |
 | `final` | prevent change | restriction | `final class` |
 
