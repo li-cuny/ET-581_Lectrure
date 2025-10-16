@@ -256,18 +256,38 @@ Group related classes to improve **readability** and **maintainability**.
 
 ### **Accessing Inner Class**
 ```java
-Outer outer = new Outer();
-Outer.Inner inner = outer.new Inner();
+class Outer {
+    int x = 10;
+
+    class Inner {
+        void show() {
+            System.out.println("Outer x = " + x);
+        }
+    }
+}
+
+Outer o = new Outer();
+Outer.Inner i = o.new Inner();
+i.show();  // Outer x = 10
 ```
 
 ---
 
-### **Types of Inner Classes**
+### **Other Types of Inner Classes**
 
-#### 1. Private Inner Class
+#### Private Inner Class
 - Not accessible from outside the outer class.
+```java
+class Library {
+    private class Staff {
+    }
+    void showStaff() {
+        Staff s = new Staff(); // OK inside outer class
+    }
+}
+```
 
-#### 2. Static Inner Class
+#### Static Inner Class
 - Can be accessed **without creating** an outer class object.
 
 ```java
