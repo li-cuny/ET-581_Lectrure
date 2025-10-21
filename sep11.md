@@ -1,4 +1,4 @@
-# Java Arrays - Key Points
+# Java Arrays
 
 ## 1. What is an Array?
 A data structure that stores a fixed number of elements of the same type, accessible by an index.
