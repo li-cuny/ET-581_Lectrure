@@ -52,3 +52,65 @@ Sometimes you want exactly one shared resource in memory — for example:
 
 - a single logging service
 
+### static variable init locations
+
+- Static variables → static block or declaration.
+```java
+class Test {
+    static int x = 100; // init at declaration
+    static int y;
+
+    static {
+        y = 100; // init inside of static block
+    }
+}
+```
+
+- Instance variables → declaration, instance block, or constructor.
+```java
+class Test {
+    int x;
+    int y;
+
+    {
+        x = 50; // init in instance block
+        
+    } 
+
+    Test() {
+        y = 10; // init in constructor
+    }
+    Test(int y) {
+        this.y = y;
+    }
+}
+```
+instance block can be used **common initialization code for  multiple constructors**.
+However in most of cases we are using
+**constructor chaining** instead.
+
+```java
+class Test {
+    int x, y;
+
+    Test() {
+        this(10);  // call parameterized constructor
+    }
+
+    Test(int y) {
+        x = 50;     // common initialization
+        this.y = y;
+    }
+}
+```
+#### Advantages of constructor chaining over instance blocks:
+
+- Clearer: all initialization logic is inside constructors.
+
+- Parameterizable: can pass values between constructors.
+
+- Easier to read and maintain.
+
+
+
+
