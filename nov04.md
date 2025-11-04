@@ -52,8 +52,8 @@ public interface Iterable<T> {
 ### Iterator
 A cursor-like object that lets you traverse elements one by one in a collection — without exposing how the collection is implemented.
 - “Iterator gives a universal way to loop through any Collection”
-examples
-- Basic Iteration of Collection
+#### Examples
+###### Basic Iteration of Collection
 ```java
 import java.util.*;
 
@@ -75,7 +75,7 @@ public class CollectionStringIterator1 {
 }
 
 ```
-- Remove Certain element While Iterating
+###### Remove Certain element While Iterating
 ```java
 Collection<String> names = new ArrayList<>();
 names.add("Alice");
