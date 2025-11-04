@@ -1,0 +1,147 @@
+## Collections
+### Why need collections
+Before Collections, Java had arrays — 
+- fixed size, 
+- no dynamic resizing, 
+- no built-in utilities.
+
+### Hierarchy
+```
+Collection
+ ├── List
+ ├── Set
+ └── Queue
+Map (separate)
+```
+**Collection** = group of individual elements.
+
+**Map** = key–value pairs (not part of Collection).
+
+### methods: 
+add(), remove(), contains(), size(), isEmpty().
+```java
+Collection<String> c = new ArrayList<>();
+c.add("Hello");
+```
+
+```java
+package java.util;
+
+public interface Collection<E> extends Iterable<E> {
+
+    // Basic operations
+    int size();
+    boolean isEmpty();
+    boolean contains(Object o);
+    boolean add(E e);
+    boolean remove(Object o);
+    void clear();
+
+    // Iterator
+    Iterator<E> iterator();
+
+}
+```
+```java
+package java.lang;
+
+public interface Iterable<T> {
+    Iterator<T> iterator();  // Returns an Iterator
+}
+```
+### Iterator
+A cursor-like object that lets you traverse elements one by one in a collection — without exposing how the collection is implemented.
+- “Iterator gives a universal way to loop through any Collection”
+examples
+- Basic Iteration of Collection
+```java
+import java.util.*;
+
+public class CollectionStringIterator1 {
+    public static void main(String[] args) {
+        // Collection interface reference
+        Collection<String> fruits = new ArrayList<>();
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Cherry");
+
+        Iterator<String> it = fruits.iterator();
+
+        while (it.hasNext()) {
+            String fruit = it.next();
+            System.out.println(fruit);
+        }
+    }
+}
+
+```
+- Remove Certain element While Iterating
+```java
+Collection<String> names = new ArrayList<>();
+names.add("Alice");
+names.add("Bob");
+names.add("Charlie");
+names.add("David");
+
+Iterator<String> it = names.iterator();
+
+while (it.hasNext()) {
+    String name = it.next();
+    if (name.startsWith("A") || name.startsWith("D")) {
+        it.remove(); // safe removal
+    }
+}
+
+System.out.println(names);
+}
+```
+### List Interface (Ordered, Duplicates Allowed)
+
+```java
+List<E> extends Collection<E>
+```
+- Adds ordered and index-based behavior
+
+- Duplicates allowed
+
+- Supports positional access (get/set by index)
+
+- Common implementations: ArrayList, LinkedList, Vector
+
+#### New Methods in List
+Method	Description
+```java 
+get(int index)	// Returns element at a specific position
+set(int index, E element)	// Replaces element at position
+add(int index, E element)	// Inserts element at a specific position 
+remove(int index)	// Removes element at a specific position
+indexOf(Object o)	// Returns first occurrence index
+lastIndexOf(Object o)	// Returns last occurrence index
+subList(int from, int to)	// Returns a portion of the list
+```
+| Method                | Action                   | Effect on Size      | Example                                |
+| --------------------- | ------------------------ | ------------------- | -------------------------------------- |
+| `set(index, element)` | Replace element at index | Size stays the same | `[A, B, C] → set(1, X) → [A, X, C]`    |
+| `add(index, element)` | Insert element at index  | Size increases by 1 | `[A, B, C] → add(1, X) → [A, X, B, C]` |
+
+Examples:
+```java
+import java.util.*;
+
+public class ListExample {
+    public static void main(String[] args) {
+        List<String> fruits = new ArrayList<>();
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Cherry");
+
+        System.out.println(fruits.get(1)); // Banana
+        fruits.add(1, "Mango");            // Insert at index 1
+        System.out.println(fruits);        // [Apple, Mango, Banana, Cherry]
+
+        fruits.remove(2);                  // Remove index 2
+        System.out.println(fruits);        // [Apple, Mango, Cherry]
+
+    }
+}
+```
