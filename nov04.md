@@ -37,6 +37,14 @@ public interface Collection<E> extends Iterable<E> {
     boolean remove(Object o);
     void clear();
 
+/* ---------------- Bulk Operations ---------------- */
+
+    boolean containsAll(Collection<?> c);          // Checks if all elements of c exist in this collection
+    boolean addAll(Collection<? extends E> c);     // Adds all elements from another collection
+    boolean removeAll(Collection<?> c);            // Removes all elements found in c
+    boolean retainAll(Collection<?> c);            // Keeps only elements also found in c
+
+
     // Iterator
     Iterator<E> iterator();
 
