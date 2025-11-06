@@ -153,3 +153,53 @@ public class ListExample {
     }
 }
 ```
+#### ListIterator
+
+ListIterator is a special type of iterator that works only with lists (ArrayList, LinkedList, etc.), allowing:
+
+| Capability                      | Regular Iterator | ListIterator |
+| ------------------------------- | ---------------- | ------------ |
+| Move forward                    | ✅                | ✅            |
+| Move backward                   | ❌                | ✅            |
+| Get current index               | ❌                | ✅            |
+| Add new element while iterating | ❌                | ✅            |
+| Replace element                 | ❌                | ✅            |
+#### Common Methods of ListIterator
+| Method            | Description                                                    |
+| ----------------- | -------------------------------------------------------------- |
+| `hasNext()`       | Checks if there’s another element ahead                        |
+| `next()`          | Moves forward and returns next element                         |
+| `hasPrevious()`   | Checks if there’s another element behind                       |
+| `previous()`      | Moves backward and returns previous element                    |
+| `nextIndex()`     | Returns the index of the next element                          |
+| `previousIndex()` | Returns the index of the previous element                      |
+| `add(E e)`        | Adds an element at the iterator’s current position             |
+| `set(E e)`        | Replaces the last element returned by `next()` or `previous()` |
+| `remove()`        | Removes the last element returned by `next()` or `previous()`  |
+* example
+```java
+import java.util.*;
+
+public class ListIteratorDemo {
+    public static void main(String[] args) {
+        List<String> names = new ArrayList<>();
+        names.add("Alice");
+        names.add("Bob");
+        names.add("Charlie");
+
+        ListIterator<String> lit = names.listIterator();
+
+        // Forward direction
+        System.out.println("Forward:");
+        while (lit.hasNext()) {
+            System.out.println(lit.next());
+        }
+
+        // Backward direction
+        System.out.println("\nBackward:");
+        while (lit.hasPrevious()) {
+            System.out.println(lit.previous());
+        }
+    }
+}
+```
