@@ -165,17 +165,18 @@ ListIterator is a special type of iterator that works only with lists (ArrayList
 | Add new element while iterating | ❌                | ✅            |
 | Replace element                 | ❌                | ✅            |
 #### Common Methods of ListIterator
-| Method            | Description                                                    |
-| ----------------- | -------------------------------------------------------------- |
-| `hasNext()`       | Checks if there’s another element ahead                        |
-| `next()`          | Moves forward and returns next element                         |
-| `hasPrevious()`   | Checks if there’s another element behind                       |
-| `previous()`      | Moves backward and returns previous element                    |
-| `nextIndex()`     | Returns the index of the next element                          |
-| `previousIndex()` | Returns the index of the previous element                      |
-| `add(E e)`        | Adds an element at the iterator’s current position             |
-| `set(E e)`        | Replaces the last element returned by `next()` or `previous()` |
-| `remove()`        | Removes the last element returned by `next()` or `previous()`  |
+| Method                  | Description                                                    |
+| ----------------------- | -------------------------------------------------------------- |
+| `boolean hasNext()`     | Checks if there’s another element ahead                        |
+| `E next()`              | Moves forward and returns the next element                     |
+| `boolean hasPrevious()` | Checks if there’s another element behind                       |
+| `E previous()`          | Moves backward and returns the previous element                |
+| `int nextIndex()`       | Returns the index of the next element                          |
+| `int previousIndex()`   | Returns the index of the previous element                      |
+| `void add(E e)`         | Adds an element at the iterator’s current position             |
+| `void set(E e)`         | Replaces the last element returned by `next()` or `previous()` |
+| `void remove()`         | Removes the last element returned by `next()` or `previous()`  |
+
 * example
 ```java
 import java.util.*;
