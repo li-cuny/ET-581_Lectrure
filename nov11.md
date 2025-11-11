@@ -71,34 +71,6 @@ served first.
 
 ------------------------------------------------------------------------
 
-##  Queue Interface Declaration
-
-``` java
-public interface Queue<E> extends Collection<E>
-```
-
-This means: - A `Queue` is a **subinterface of Collection**\
-- It adds **extra methods** for queue-style insertion, removal, and
-inspection
-
-------------------------------------------------------------------------
-
-## Common Implementations
-
-  -----------------------------------------------------------------------
-  Class                     Description
-  ------------------------- ---------------------------------------------
-  `LinkedList`              Doubly-linked structure, allows `null`
-                            elements
-
-  `PriorityQueue`           Orders elements by priority (natural order or
-                            comparator)
-
-  `ArrayDeque`              Array-based, faster than LinkedList, does
-                            **not** allow `null`
-  -----------------------------------------------------------------------
-
-------------------------------------------------------------------------
 
 ## Core Queue Methods
 
