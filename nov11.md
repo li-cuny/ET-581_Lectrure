@@ -1,7 +1,7 @@
 # Java Collections: Set Interface
 
 
-## 1️⃣ What is a Set?
+## What is a Set?
 
 - `Set` is a **Collection that contains no duplicate elements**.  
 - It **extends the Collection interface**, so it has all the Collection methods.
@@ -12,7 +12,7 @@
 
 ---
 
-## 2️⃣ Common Set Implementations
+## Common Set Implementations
 
 | Class | Order | Notes |
 |-------|-------|------|
@@ -22,7 +22,7 @@
 
 ---
 
-## 3️⃣ Key Methods (Inherited from Collection)
+## Key Methods (Inherited from Collection)
 
 | Method | Behavior in Set |
 |--------|----------------|
@@ -36,7 +36,7 @@
 
 ---
 
-## 4️⃣ Example: Set vs List
+## Example: Set vs List
 
 ```java
 import java.util.*;
@@ -64,7 +64,7 @@ processing**.\
 It follows the **FIFO (First In, First Out)** principle --- the first
 element added is the first removed.
 
-### 💡 Real-life Analogy
+### Real-life Analogy
 
 Think of a line at a ticket counter --- the person who comes first gets
 served first.
@@ -100,7 +100,7 @@ inspection
 
 ------------------------------------------------------------------------
 
-## 🧠 4️⃣ Core Queue Methods
+## Core Queue Methods
 
   --------------------------------------------------------------------------
   Method         Description         Behavior When Empty / Full
@@ -124,12 +124,12 @@ inspection
                  (without removing)  
   --------------------------------------------------------------------------
 
-🧩 **Tip:**\
+ **Tip:**\
 Use `offer`, `poll`, and `peek` for **safe, non-exception** operations.
 
 ------------------------------------------------------------------------
 
-## 💻 5️⃣ Example --- Using Queue with LinkedList
+## Example --- Using Queue with LinkedList
 
 ``` java
 import java.util.*;
@@ -160,9 +160,9 @@ public class QueueExample {
 
 ------------------------------------------------------------------------
 
-## 🔄 6️⃣ Queue vs List
 
-  ## 🔄 6️⃣ Queue vs List
+
+## Queue vs List
 
 | Feature | `List` | `Queue` |
 |----------|---------|----------|
