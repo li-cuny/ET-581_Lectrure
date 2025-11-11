@@ -55,7 +55,7 @@ public class SetExample {
         System.out.println("Set: " + set);   // [Apple]
     }
 }
-
+```
 
 # Collection :  Queue
 
@@ -184,9 +184,72 @@ public class QueueExample {
 List<E>          Set<E>         Queue<E>
  │               │               │
  │               │               │
- ├─ ArrayList     ├─ HashSet      ├─ LinkedList
- ├─ LinkedList    ├─ LinkedHashSet├─ PriorityQueue
- ├─ Vector        ├─ TreeSet      ├─ ArrayDeque
- └─ Stack        (SortedSet)      └─ (Deque<E> subinterface)
-
+ ├─ ArrayList    ├─ HashSet      ├─ LinkedList
+ ├─ LinkedList   ├─ LinkedHashSet├─ PriorityQueue
+ ├─ Vector       ├─ TreeSet      ├─ ArrayDeque
+ └─ Stack        (SortedSet)     └─ (Deque<E> subinterface)
 ```
+| Interface  | Purpose                                                                                                             |
+| ---------- | ------------------------------------------------------------------------------------------------------------------- |
+| `Queue<E>` | Represents a **first-in-first-out (FIFO) queue**. Elements are **added at the end** and **removed from the front**. |
+| `Deque<E>` | Represents a **double-ended queue**. Elements can be **added or removed from both ends** (front and back).          |
+
+
+## Collections.sort()
+
+It’s a static method in the `java.util.Collections` utility class.
+
+- Purpose: sort elements of a List in-place.
+
+
+
+1. Sort using natural order
+Collections.sort(List<T> list)
+
+
+Example:
+```java
+List<Integer> numbers = new ArrayList<>(Arrays.asList(5, 1, 3));
+Collections.sort(numbers); // Ascending order
+System.out.println(numbers); // [1, 3, 5]
+```
+2. Sort using a custom comparator
+
+Example (descending order):
+```java
+List<Integer> numbers = new ArrayList<>(Arrays.asList(5, 1, 3));
+Collections.sort(numbers, (a, b) -> b - a);
+System.out.println(numbers); // [5, 3, 1]
+```
+3. Using Collections.sort() with Custom Classes
+```java
+class Student implements Comparable<Student> {
+    String name;
+    int age;
+
+    Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    public int compareTo(Student other) {
+        return this.age - other.age; // sort by age ascending
+    }
+
+    @Override
+    public String toString() {
+        return name + "(" + age + ")";
+    }
+}
+```
+```java
+List<Student> students = new ArrayList<>();
+students.add(new Student("Alice", 22));
+students.add(new Student("Bob", 20));
+students.add(new Student("Charlie", 25));
+
+Collections.sort(students); 
+System.out.println(students); // [Bob(20), Alice(22), Charlie(25)]
+```
+
