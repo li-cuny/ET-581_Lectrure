@@ -74,27 +74,14 @@ served first.
 
 ## Core Queue Methods
 
-  --------------------------------------------------------------------------
-  Method         Description         Behavior When Empty / Full
-  -------------- ------------------- ---------------------------------------
-  `offer(E e)`   Adds element to the Returns `false` if fails
-                 queue               
-
-  `add(E e)`     Adds element to the Throws exception if fails
-                 queue               
-
-  `poll()`       Removes and returns Returns `null` if empty
-                 head                
-
-  `remove()`     Removes and returns Throws `NoSuchElementException`
-                 head                
-
-  `peek()`       Retrieves head      Returns `null` if empty
-                 (without removing)  
-
-  `element()`    Retrieves head      Throws `NoSuchElementException`
-                 (without removing)  
-  --------------------------------------------------------------------------
+| Method      | Description                  | Behavior When Empty / Full                 |
+|------------|------------------------------|-------------------------------------------|
+| `offer(E e)` | Adds element to the queue   | Returns `false` if it fails               |
+| `add(E e)`   | Adds element to the queue   | Throws exception if it fails              |
+| `poll()`     | Removes and returns head    | Returns `null` if empty                   |
+| `remove()`   | Removes and returns head    | Throws `NoSuchElementException`          |
+| `peek()`     | Retrieves head without removing | Returns `null` if empty               |
+| `element()`  | Retrieves head without removing | Throws `NoSuchElementException`       |
 
  **Tip:**\
 Use `offer`, `poll`, and `peek` for **safe, non-exception** operations.
