@@ -1,4 +1,4 @@
-# 🗺️ `Map` interface
+# `Map` interface
 
 
 ## 1. What Is a `Map`?
