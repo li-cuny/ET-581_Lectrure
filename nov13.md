@@ -1,7 +1,7 @@
 # 🗺️ `Map` interface
 
 
-## 🧱 1. What Is a `Map`?
+## 1. What Is a `Map`?
 
 A **`Map`** stores **key–value pairs**.  
 Each **key** is unique and maps to **exactly one value**.
@@ -32,7 +32,7 @@ students.put(102, "Bob");
 
 
 
-## 🧱 Main Implementations Overview
+##  Main Implementations Overview
 
 | Implementation | Ordered? | Sorted? | Allows nulls? | Typical Use |
 |----------------|-----------|----------|----------------|--------------|
