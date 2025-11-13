@@ -147,3 +147,9 @@ Bucket 1 → [Key1=Value1] → [Key5=Value5] → [Key9=Value9]
 - Threshold = `capacity * load factor`
 - When entries exceed threshold → array **doubles** → entries **rehash-distributed**
 
+## HashSet internally
+
+- Every HashSet in Java internally has a HashMap.
+
+- HashSet does not store values itself—it only uses the keys of the map.
+
