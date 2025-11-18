@@ -35,7 +35,7 @@ List<String> shortNames2 = names.stream()
   - Examples: `collect()`, `forEach()`, `count()`, `reduce()`  
 - Streams **cannot be reused** after a terminal operation.
 
----
+
 
 ## Simple Pipeline Example
 
@@ -83,6 +83,56 @@ int sum = numbers.parallelStream()
 - Use only for CPU-intensive operations or large datasets.
 
 ---
+---
+# Stream source
+
+Here are the top 5 most commonly used Stream creation methods in real
+projects.
+
+------------------------------------------------------------------------
+
+## 1. From a Collection
+
+``` java
+list.stream();
+```
+
+------------------------------------------------------------------------
+
+## 2. From an Array
+
+``` java
+Arrays.stream(array);
+Arrays.stream(intArray); // IntStream
+```
+
+------------------------------------------------------------------------
+
+## 3. From Fixed Values
+
+``` java
+Stream.of(1, 2, 3);
+Stream.of("A", "B", "C");
+```
+
+------------------------------------------------------------------------
+
+## 4. From File Lines
+
+``` java
+Files.lines(Path.of("data.txt"));
+```
+
+------------------------------------------------------------------------
+
+## 5. Infinite Streams (generate / iterate)
+
+``` java
+Stream.generate(Math::random);
+Stream.iterate(0, n -> n + 1);
+```
+
+------------------------------------------------------------------------
 
 ## 💡Intermediate operations Tips 
 
