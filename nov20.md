@@ -1,4 +1,4 @@
-# Why Do Custom Classes Need Generics?
+# Generics
 
 Generics allow classes, interfaces, and methods to operate on **different data types** while still providing **type safety** and **code reuse**. This becomes especially important when creating your own custom classes.
 
