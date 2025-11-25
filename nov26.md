@@ -1,31 +1,25 @@
 # Java File Handling
-
-- Create files
-- Read data from files
-- Write data to files
-- Delete files
-
 ---
 
-## A. File Management (File system operations)
-Use **`File` class**:  
-- `exists()`  
-- `createNewFile()`  
-- `delete()`  
-- `length()`  
-- `getName()`  
-- `getAbsolutePath()`  
-- `list()`  
+## 1. File Management (File system operations)
+Use **`File` class**:
+- `exists()`
+- `createNewFile()`
+- `delete()`
+- `length()`
+- `getName()`
+- `getAbsolutePath()`
+- `list()`
 
-**Important:**  
+**Important:**
 The `File` class does **not** read or write file contents.
 
 ---
 
-## B. Character/Text Files (Human-readable)
+## 2. Character/Text Files (Human-readable)
 Use for `.txt`, `.csv`, `.json`.
 
-Classes:
+**Classes:**
 - `FileWriter`
 - `BufferedWriter`
 - `FileReader`
@@ -34,10 +28,10 @@ Classes:
 
 ---
 
-## C. Binary Files (Images, audio, video)
+## 3. Binary Files (Images, audio, video)
 Use for non-text data like `.png`, `.mp3`, `.mp4`.
 
-Classes:
+**Classes:**
 - `FileInputStream`
 - `FileOutputStream`
 - `BufferedInputStream`
@@ -45,24 +39,17 @@ Classes:
 
 ---
 
+## 4. Java File Read and Write
+
+### 4.1 Introduction
+Java provides multiple APIs to read and write files. The most common and modern approach is using the `java.nio.file` package, but older approaches like `FileReader`, `BufferedReader`, and `FileWriter` are still widely used.
+
 ---
 
-# Java File Read and Write
+### 4.2 Reading Files
 
-## 1. Introduction
-
-Java provides multiple APIs to read and write files. The most common and
-modern approach is using the `java.nio.file` package, but older
-approaches like `FileReader`, `BufferedReader`, and `FileWriter` are
-still widely used.
-
-------------------------------------------------------------------------
-
-## 2. Reading Files
-
-### **2.1 Using Files.readAllLines() (Simple & Modern)**
-
-``` java
+#### 4.2.1 Using Files.readAllLines()
+```java
 import java.nio.file.*;
 import java.io.*;
 import java.util.*;
@@ -77,11 +64,37 @@ public class ReadExample {
 }
 ```
 
-------------------------------------------------------------------------
+#### 4.2.2 Using Files.lines(inputPath)
+```java
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.io.IOException;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-### **2.2 Using BufferedReader (Traditional & Efficient)**
+public class StreamFileExample {
+    public static void main(String[] args) {
+        Path inputPath = Path.of("input.txt");
+        Path outputPath = Path.of("output.txt");
 
-``` java
+        try (Stream<String> lines = Files.lines(inputPath)) {
+            List<String> upperLines = lines
+                    .map(String::toUpperCase)
+                    .collect(Collectors.toList());
+
+            Files.write(outputPath, upperLines);
+            System.out.println("Processing complete. Check output.txt");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+#### 4.2.3 Using BufferedReader (Traditional & Efficient)
+```java
 import java.io.*;
 
 public class BufferedReaderExample {
@@ -96,13 +109,12 @@ public class BufferedReaderExample {
 }
 ```
 
-------------------------------------------------------------------------
+---
 
-## 3. Writing Files
+### 4.3 Writing Files
 
-### **3.1 Using Files.writeString()**
-
-``` java
+#### 4.3.1 Using Files.writeString()
+```java
 import java.nio.file.*;
 
 public class WriteExample {
@@ -112,11 +124,8 @@ public class WriteExample {
 }
 ```
 
-------------------------------------------------------------------------
-
-### **3.2 Using BufferedWriter**
-
-``` java
+#### 4.3.2 Using BufferedWriter
+```java
 import java.io.*;
 
 public class BufferedWriterExample {
@@ -130,11 +139,10 @@ public class BufferedWriterExample {
 }
 ```
 
-------------------------------------------------------------------------
+---
 
-## 4. Reading CSV Files (Basic)
-
-``` java
+### 4.4 Reading CSV Files 
+```java
 import java.io.*;
 
 public class CSVExample {
@@ -150,11 +158,10 @@ public class CSVExample {
 }
 ```
 
-------------------------------------------------------------------------
+---
 
-## 5. Writing CSV Files
-
-``` java
+### 4.5 Writing CSV Files
+```java
 import java.io.*;
 
 public class WriteCSV {
@@ -168,17 +175,17 @@ public class WriteCSV {
 }
 ```
 
-------------------------------------------------------------------------
+---
 
-## 6. Best Practices
+### 4.6 Best Practices
+- Always close readers/writers (or use try-with-resources)
+- Prefer `java.nio.file` for modern applications
+- Use `BufferedReader`/`BufferedWriter` for large files
+- Validate CSV fields before parsing
 
--   Always close readers/writers (or use try-with-resources)
--   Prefer `java.nio.file` for modern applications
--   Use `BufferedReader`/`BufferedWriter` for large files
--   Validate CSV fields before parsing
+---
 
-
-### Text (Character) I/O 
+## 5. Text (Character) I/O
 
 | Reader (Input)                  | Writer (Output)                   | Notes / Use Case                                                                        |
 | ------------------------------- | --------------------------------- | --------------------------------------------------------------------------------------- |
@@ -189,8 +196,7 @@ public class WriteCSV {
 | `Files.readAllLines(Path)`      | `Files.writeString(Path, String)` | Convenience methods for small files. Reads all lines into memory / writes whole string. |
 | `Files.lines(Path)`             | `Files.write(Path, List<String>)` | Stream-based modern API. Lazy reading / writing multiple lines.                         |
 
-
-### Binary (Byte) I/O 
+## 6. Binary (Byte) I/O
 
 | InputStream (Input)          | OutputStream (Output)         | Notes / Use Case                                                                        |
 | ---------------------------- | ----------------------------- | --------------------------------------------------------------------------------------- |
@@ -198,4 +204,3 @@ public class WriteCSV {
 | `BufferedInputStream`        | `BufferedOutputStream`        | Wrap low-level streams for efficiency. Common for large files or frequent reads/writes. |
 | `Files.newInputStream(Path)` | `Files.newOutputStream(Path)` | Modern, low-level streams. Can wrap in buffered streams for efficiency.                 |
 | N/A                          | `Files.write(Path, byte[])`   | Modern convenience method to write byte arrays.                                         |
-
