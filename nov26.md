@@ -108,7 +108,20 @@ public class BufferedReaderExample {
     }
 }
 ```
+* try-with-resource
+```java
+try (BufferedReader br = new BufferedReader(new FileReader("data.txt"))) {
 
+    String line;
+    while ((line = br.readLine()) != null) {
+        System.out.println(line);
+    }
+    //try-with-rerouse will call br.close()
+    // br.close() will call fileReader.close()
+} catch (Exception e) {
+    e.printStackTrace();
+}
+```
 ---
 
 ### 4.3 Writing Files
