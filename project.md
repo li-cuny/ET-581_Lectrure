@@ -1,4 +1,4 @@
-# Java OOP Shopping System — Compile & Run Guide
+# Project — Compile & Run Guide
 
 ## Compile
 
