@@ -40,3 +40,45 @@ switch (today) {
     default -> System.out.println("Midweek...");
 }
 ```
+# Java Swing GUI
+
+## 1. What is Swing?
+
+- Swing is Java’s **GUI toolkit** for desktop applications.
+- Provides **lightweight components** like buttons, labels, text fields, tables, and trees.
+
+> Think of Swing as **LEGO for GUIs** — you assemble components to build interfaces.
+
+---
+
+## 2. Core Components
+
+| Component       | Purpose                        |
+|-----------------|--------------------------------|
+| `JFrame`        | Main window                    |
+| `JPanel`        | Container for grouping items   |
+| `JButton`       | Clickable button               |
+| `JLabel`        | Display text or images         |
+| `JTextField`    | Single-line input              |
+| `JTextArea`     | Multi-line input               |
+| `JComboBox`     | Dropdown list                  |
+| `JCheckBox` / `JRadioButton` | Selection options |
+
+---
+
+## 3. Event Handling
+
+Swing is **event-driven**. Components react to user actions using listeners.
+
+```java
+JButton button = new JButton("Click Me");
+button.addActionListener(e -> System.out.println("Button clicked!"));
+```
+## 4. Layout Manager
+| Layout       | Diagram                          |
+| ------------ | -------------------------------- |
+| FlowLayout   | `[Btn1] [Btn2] [Btn3]`           |
+| BorderLayout | `NORTH`<br>`CENTER`<br>`SOUTH`   |
+| GridLayout   | `[Btn1][Btn2]`<br>`[Btn3][Btn4]` |
+
+https://docs.oracle.com/javase/tutorial/uiswing/layout/visual.html
