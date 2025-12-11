@@ -64,6 +64,8 @@ switch (today) {
 | `JComboBox`     | Dropdown list                  |
 | `JCheckBox` / `JRadioButton` | Selection options |
 
+https://github.com/li-cuny/ET-581_Demo/blob/main/L14/Ex39_core_components/SwingCore.java
+
 ---
 
 ## 3. Event Handling
